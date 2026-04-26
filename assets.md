@@ -2,6 +2,21 @@
 
 ## UI / Screens
 - [ ] Loading screen
+- [ ] Login screen background image (full-screen)
+- [ ] "Touch to Start" overlay text style
+- [ ] Home screen layout (player name editable, Quick Play + Host Lobby buttons)
+- [ ] Lobby UI (player list, ready state)
+- [ ] Host Lobby join-code input + display
+- [ ] Map vote UI
+- [ ] In-match chat UI (overlay)
+- [ ] Match summary / scoreboard screen
+
+## Badges (player rank tiers)
+- [ ] Bronze
+- [ ] Silver
+- [ ] Gold
+- [ ] Platinum
+- [ ] Diamond
 
 ## Characters
 ### Noobie player (rigged sprite parts)
@@ -61,6 +76,10 @@
 - [ ] Clouds
 - [ ] Distant mountains / silhouette
 
+### Maps (v1 — full playable layouts)
+- [ ] Outpost (open / vertical, militant theme)
+- [ ] Catacombs (underground tight corridors)
+
 ## Audio
 ### Weapon SFX (one per gun)
 - [ ] Pistol shot
@@ -93,6 +112,8 @@
 - [ ] Match start beep
 - [ ] Match end / victory chime
 - [ ] Kill confirm ping
+- [ ] Kill sound (in-match feedback when you get a kill)
+- [ ] Chat message received ping
 
 ### Music
 - [ ] Loading screen track (loopable)
