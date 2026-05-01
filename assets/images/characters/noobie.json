@@ -1,0 +1,16 @@
+{
+  "frames": {
+    "body":  { "frame": { "x": 40,  "y": 59,  "w": 300, "h": 261 } },
+    "head":  { "frame": { "x": 426, "y": 31,  "w": 367, "h": 288 } },
+    "legL":  { "frame": { "x": 90, "y": 530, "w": 214, "h": 412 } },
+    "legR":  { "frame": { "x": 90, "y": 530, "w": 214, "h": 412 } },
+    "handL": { "frame": { "x": 500, "y": 505, "w": 290, "h": 376 } },
+    "handR": { "frame": { "x": 480, "y": 505, "w": 290, "h": 376 } }
+  },
+  "meta": {
+    "image": "noobie.webp",
+    "size": { "w": 800, "h": 800 },
+    "scale": "1",
+    "note": "legL/legR and handL/handR currently share the same atlas region; the artist may later draw distinct mirrored variants (e.g., for asymmetric poses) without code changes."
+  }
+}

@@ -1,0 +1,125 @@
+:root {
+  color-scheme: dark;
+  --bg: #050608;
+  --fg: #f5f5f7;
+  --accent: #ffcc33;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game canvas {
+  display: block;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+/* ---------- Rotate overlay ---------- */
+#rotate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 6, 8, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fade-in 200ms ease-out;
+}
+
+#rotate-overlay[hidden] {
+  display: none;
+}
+
+.rotate-overlay__content {
+  text-align: center;
+  padding: 24px;
+  max-width: 320px;
+}
+
+.rotate-overlay__icon {
+  color: var(--accent);
+  display: inline-flex;
+  animation: rotate-hint 1.6s ease-in-out infinite;
+}
+
+.rotate-overlay__text {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--fg);
+  letter-spacing: 0.02em;
+}
+
+@keyframes rotate-hint {
+  0%   { transform: rotate(0deg); }
+  40%  { transform: rotate(-90deg); }
+  70%  { transform: rotate(-90deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---------- Fullscreen button ---------- */
+#fullscreen-btn {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 900;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(245, 245, 247, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--fg);
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 150ms ease, background 150ms ease, transform 150ms ease;
+}
+
+#fullscreen-btn:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#fullscreen-btn:active {
+  transform: scale(0.94);
+}
+
+#fullscreen-btn[hidden] {
+  display: none;
+}
